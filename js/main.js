@@ -74,3 +74,13 @@ function find_average(array) {
     return total / array.length;
 }
     }
+
+const first = "hello world";
+const second = "hey there";
+const removeAll = (first, second) => {
+    const newArr = second.split("").filter(el => {
+        return !first.includes(el);
+    });
+    return newArr.join("");
+};
+console.log(removeAll(first, second));
