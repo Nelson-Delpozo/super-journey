@@ -92,11 +92,12 @@ function Book(title, author, read){
     this.author = author
     this.read = read
     this.info = function(){
-        console.log(title + ', ' + author + ', ' + read)
+        return (title + ', ' + author + ', ' + read)
     }
 }
 
 let book1 = new Book("For Whom The Bell Tolls", "Ernest Hemingway", "read")
 
-console.log(book1)
+console.log(book1.info())
 console.log(book1.author)
+
