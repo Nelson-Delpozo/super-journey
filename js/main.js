@@ -84,3 +84,19 @@ const removeAll = (first, second) => {
     return newArr.join("");
 };
 console.log(removeAll(first, second));
+
+//////////
+
+function Book(title, author, read){
+    this.title = title
+    this.author = author
+    this.read = read
+    this.info = function(){
+        console.log(title + ', ' + author + ', ' + read)
+    }
+}
+
+let book1 = new Book("For Whom The Bell Tolls", "Ernest Hemingway", "read")
+
+console.log(book1)
+console.log(book1.author)
