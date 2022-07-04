@@ -101,3 +101,20 @@ let book1 = new Book("For Whom The Bell Tolls", "Ernest Hemingway", "read")
 console.log(book1.info())
 console.log(book1.author)
 
+function Student() {
+}
+
+Student.prototype.sayName = function() {
+    console.log(this.name)
+}
+
+function EighthGrader(name) {
+    this.name = name
+    this.grade = 8
+}
+
+EighthGrader.prototype = Object.create(Student.prototype)
+
+const carl = new EighthGrader("carl")
+carl.sayName() // console.logs "carl"
+carl.grade // 8
