@@ -118,3 +118,13 @@ EighthGrader.prototype = Object.create(Student.prototype)
 const carl = new EighthGrader("carl")
 carl.sayName() // console.logs "carl"
 carl.grade // 8
+
+function Account () {
+}
+// This is the use of the Account constructor to create the userAccount object.
+// let userAccount = new Account ();
+
+// Another example: Account () is the constructor
+let userAccount = new Account ();
+// Find the userAccount object's constructor
+console.log(userAccount.constructor); // Account()
