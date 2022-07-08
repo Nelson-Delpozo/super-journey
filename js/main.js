@@ -168,13 +168,49 @@ let rabbit = {
     jumps: true
 };
 
-alert( rabbit.jumps ); // ? (1)
+console.log(( rabbit.jumps )); // ? (1)
 //true
 delete rabbit.jumps;
 
-alert( rabbit.jumps ); // ? (2)
+console.log(( rabbit.jumps )); // ? (2)
 //null
 delete animal.jumps;
 
-alert( rabbit.jumps ); // ? (3)
+console.log(( rabbit.jumps )); // ? (3)
 //undefined
+
+// let animal1 = {
+//     eat() {
+//         this.full = true;
+//     }
+// };
+//
+// let rabbit1 = {
+//     __proto__: animal1
+// };
+//
+// console.log(rabbit1.eat());
+
+let hamster = {
+    stomach: [],
+
+    eat(food) {
+        this.stomach.push(food);
+    }
+};
+
+let speedy = {
+    __proto__: hamster
+};
+
+let lazy = {
+    // __proto__: hamster
+    // __proto__: speedy
+};
+
+// This one found the food
+speedy.eat("apple");
+console.log(( speedy.stomach )); // apple
+
+// This one also has it, why? fix please.
+console.log(( lazy.stomach )); // apple
