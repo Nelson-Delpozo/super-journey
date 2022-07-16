@@ -214,3 +214,8 @@ console.log(( speedy.stomach )); // apple
 
 // This one also has it, why? fix please.
 console.log(( lazy.stomach )); // apple
+
+function doubleInteger(i) {
+    // i will be an integer. Double it and return it.
+    return i * 2;
+}
